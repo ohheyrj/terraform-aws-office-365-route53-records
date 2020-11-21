@@ -8,7 +8,6 @@ variable "domain_name" {
 }
 
 variable "verify_id" {
-  type        = number
   description = "The unique ID Microsoft provides to verify your domain, e.g. MS=ms########. Only the numbers are required."
   default     = ""
 }
