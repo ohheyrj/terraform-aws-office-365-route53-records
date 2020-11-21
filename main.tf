@@ -82,7 +82,7 @@ resource "aws_route53_record" "srv_sip" {
 resource "aws_route53_record" "srv_sipfederationtls" {
   count   = var.enable_s4b == true ? 1 : 0
   zone_id = var.zone_id
-  name    = "_sipfederationtls._tls"
+  name    = "_sipfederationtls._tcp"
   ttl     = 3600
   records = [
     "100 1 5061 sipfed.online.lync.com"
