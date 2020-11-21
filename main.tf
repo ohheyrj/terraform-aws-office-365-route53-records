@@ -41,7 +41,7 @@ resource "aws_route53_record" "spf" {
   records = [
     "v=spf1 include:spf.protection.outlook.com -all"
   ]
-  type = "SPF"
+  type = "TXT"
 }
 
 # Skype for Business
