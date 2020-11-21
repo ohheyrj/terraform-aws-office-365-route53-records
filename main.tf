@@ -25,7 +25,7 @@ resource "aws_route53_record" "mx_record" {
 resource "aws_route53_record" "cname_autodiscovery" {
   count   = var.enable_exchange == true ? 1 : 0
   zone_id = var.zone_id
-  name    = "autodiscovery"
+  name    = "autodiscover"
   ttl     = 3600
   records = [
     "autodiscover.outlook.com"
@@ -82,7 +82,7 @@ resource "aws_route53_record" "srv_sip" {
 resource "aws_route53_record" "srv_sipfederationtls" {
   count   = var.enable_s4b == true ? 1 : 0
   zone_id = var.zone_id
-  name    = "_sipfederationtls"
+  name    = "_sipfederationtls._tls"
   ttl     = 3600
   records = [
     "100 1 5061 sipfed.online.lync.com"
