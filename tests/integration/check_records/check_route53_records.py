@@ -144,7 +144,7 @@ if __name__ == "__main__":
     required_mx_records = [
         {
             "Name": fqdn_domain,
-            "Value": f"0 {domain_name.replace('.', '-')}.mail.protection.outlook.com.", # noqa: E501
+            "Value": f"0 {domain_name.replace('.', '-')}.mail.protection.outlook.com", # noqa: E501
             "Result": False
         }
     ]
@@ -191,12 +191,12 @@ if __name__ == "__main__":
     required_srv_records = [
         {
             "Name": f"_sipfederationtls._tcp.{fqdn_domain}",
-            "Value": "100 1 5061 sipfed.online.lync.com.",
+            "Value": "100 1 5061 sipfed.online.lync.com",
             "Result": False
         },
         {
             "Name": f"_sip._tls.{fqdn_domain}",
-            "Value": "100 1 443 sipdir.online.lync.com.",
+            "Value": "100 1 443 sipdir.online.lync.com",
             "Result": False
         }
     ]
