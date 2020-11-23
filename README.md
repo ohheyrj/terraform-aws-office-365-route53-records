@@ -3,9 +3,9 @@
 
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/rj175/terraform-aws-office-365-route53-records?style=flat-square)
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/rj175/terraform-aws-office-365-route53-records/Deployment_test?label=deployment&logo=github&style=flat-square)
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/rj175/terraform-aws-office-365-route53-records/Linting?label=linting&logo=github&style=flat-square)
 ![GitHub](https://img.shields.io/github/license/rj175/terraform-aws-office-365-route53-records?style=flat-square)
 ![GitHub last commit](https://img.shields.io/github/last-commit/rj175/terraform-aws-office-365-route53-records?style=flat-square)
+![GitHub issues](https://img.shields.io/github/issues-raw/rj175/terraform-aws-office-365-route53-records?style=flat-square)
 
 This module will create all DNS records required for Office 365. Each component can be turned off individually.
 
