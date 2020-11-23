@@ -113,6 +113,7 @@ def check_required_records(
         else:
             log.error(
                 f'\u2717: Did not find the correct {record_type} record called {required_name} for { required_value }') # noqa: E501
+            log.error(f'These were the records checked: {records}')
         TEST_RESULTS.append(required)
 
 
