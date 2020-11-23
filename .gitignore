@@ -53,6 +53,7 @@ override.tf.json
 !.vscode/tasks.json
 !.vscode/launch.json
 *.code-workspace
+tests/integrations/check_records/.vscode/*
 
 ### VisualStudioCode Patch ###
 # Ignore all local history of files
