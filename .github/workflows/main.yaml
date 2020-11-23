@@ -1,6 +1,14 @@
 ---
 name: Deployment_test
-on: [ pull_request, workflow_dispatch ]
+on:
+  pull_request:
+    paths-ignore: 
+      - '*.md'
+      - 'LICENCE'
+      - '.chglog/*'
+      - '.pre-commit-config.yaml'
+      - '.terraform-docs.yaml'
+  workflow_dispatch:
 
 jobs:
   terraform_deployment:
