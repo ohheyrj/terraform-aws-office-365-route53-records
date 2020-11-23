@@ -19,8 +19,9 @@ module "o365" {
   source           = "../.."
   zone_id          = aws_route53_zone.route53_zone.zone_id
   domain_name      = "testing.systemsmystery.tech"
-  enable_exchange  = false
-  enable_spf       = false
-  enable_basic_mdm = false
-  enable_s4b       = false
+  enable_exchange  = true
+  enable_spf       = true
+  enable_basic_mdm = true
+  enable_s4b       = true
+  verify_id        = "123456"
 }
