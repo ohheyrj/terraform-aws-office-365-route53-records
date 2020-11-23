@@ -23,5 +23,4 @@ module "o365" {
   enable_spf       = true
   enable_basic_mdm = true
   enable_s4b       = true
-  verify_id        = "123456"
 }
