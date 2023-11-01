@@ -1,11 +1,20 @@
-resource "aws_route53_record" "txt_verify" {
+locals {
+    txt_verify_record = "MS=ms${var.verify_id}"
+
+    spf_record = "v=spf1 include:spf.protection.outlook.com -all"
+
+    txt_records = concat(
+        [local.txt_verify_record],
+        var.enable_exchange ? [local.spf_record] : []
+    )
+}
+
+resource "aws_route53_record" "txt" {
   count   = length(var.verify_id) > 0 ? 1 : 0
   zone_id = var.zone_id
   name    = ""
   ttl     = 3600
-  records = [
-    "MS=ms${var.verify_id}"
-  ]
+  records = local.txt_records
   type = "TXT"
 }
 
@@ -31,17 +40,6 @@ resource "aws_route53_record" "cname_autodiscovery" {
     "autodiscover.outlook.com"
   ]
   type = "CNAME"
-}
-
-resource "aws_route53_record" "spf" {
-  count   = var.enable_spf == true ? 1 : 0
-  zone_id = var.zone_id
-  name    = ""
-  ttl     = 3600
-  records = [
-    "v=spf1 include:spf.protection.outlook.com -all"
-  ]
-  type = "TXT"
 }
 
 # Skype for Business
